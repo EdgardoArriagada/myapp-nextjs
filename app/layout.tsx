@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Props = {
   children: React.ReactNode;
 };
@@ -5,9 +7,18 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html>
-      <head>
-        <body>{children}</body>
-      </head>
+      <body>
+        <main>
+          <nav>
+            <Link href="/">Home</Link>
+          </nav>
+
+          <nav>
+            <Link href="/">Notes</Link>
+          </nav>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
