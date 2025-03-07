@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import PocketBase from "pocketbase";
+import CreateNote from "./CreateNote";
 
 export const dynamic = "auto",
   dynamicParams = true,
@@ -23,6 +24,7 @@ export default async function NotesPage() {
     <div>
       <h1>Notes</h1>
       <div>{notes?.map((note) => <Note key={note.id} note={note} />)}</div>
+      <CreateNote />
     </div>
   );
 }
