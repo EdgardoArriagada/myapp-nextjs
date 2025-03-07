@@ -14,7 +14,7 @@ export default function RootLayout({ children }: Props) {
           </nav>
 
           <nav>
-            <Link href="/">Notes</Link>
+            <Link href="/notes">Notes</Link>
           </nav>
           {children}
         </main>
